@@ -1,20 +1,37 @@
 
 # Telecom Mission Control Backend Design
 
-This repository describes a scalable backend system architechture for a telecom mission control SAAS platform.
+**Requirements**
+
+This document describes a scalable backend system architecture for a telecom mission control SAAS platform.
 The system helps enterprise to monitor the mobile device usage at the network edge via carrier shared cell towers.
 Policies are defined by enterprises. The system enforces these policies on the users based on subscriptions.
 User actions are monitored
 New Devices can be registered
-supports features like auto-remediation and real time dashboards
+supports features like auto-remediation for premium users
+analytics and real time dashboards are supported.
 
-## Architecture
 
-Overview
 
-- [Architecture](docs/architecture.md)
-- [ER diagram](docs/architecture.md)
-- [System Design](docs/architecture.md)
-- [API spec]
-- [Assumptions](docs/assumptions.md)
+**Assumptions**
+- Carriers will decide which OS will connect to which towers.
+- An equipment on Towers will detect the devices, and report App usage
+- Two types of data is being sent a) real time app usage updates b) from the carriers about tower metadata (like which tower supports which carrier, new tower added etc)
 
+
+**Services**
+- Ingestion service 
+  - This will simply collect the data from the carriers and tower equipment. 
+  - process the data from carriers -like which OS ? device type etc. (this will help in onboarding)
+  - process the data from tower equipment - which app, what action (this will help with policy enforcements)
+
+**Device service**
+- Registers and manages enterprise devices. CRUD for Devices. (ex: when a new devices connects to a tower it registers its metadata.)
+**Tower Service**
+- Stores tower - carrierOS mapping (ex: which towers can At&t users connect to)
+**User Service**
+- manages User identify and Enterprise role / subscription 
+**Policy Service**
+- Manages polices given by enterprises 
+
+    
