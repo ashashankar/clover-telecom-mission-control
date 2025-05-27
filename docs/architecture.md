@@ -24,14 +24,16 @@ analytics and real time dashboards are supported.
   - This will simply collect the data from the carriers and tower equipment. 
   - process the data from carriers -like which OS ? device type etc. (this will help in onboarding)
   - process the data from tower equipment - which app, what action (this will help with policy enforcements)
-
-**Device service**
-- Registers and manages enterprise devices. CRUD for Devices. (ex: when a new devices connects to a tower it registers its metadata.)
-**Tower Service**
-- Stores tower - carrierOS mapping (ex: which towers can At&t users connect to)
-**User Service**
-- manages User identify and Enterprise role / subscription 
-**Policy Service**
-- Manages polices given by enterprises 
+- Device service
+  - Registers and manages enterprise devices. CRUD for Devices. (ex: when a new devices connect to a tower it registers its metadata.)
+- Tower Service
+  - Stores tower - carrierOS mapping (ex: which towers can At&t users connect to)
+- User Service
+  - manages User identify and Enterprise role / subscription 
+- Policy Service
+  - Manages polices given by enterprises 
+- Policy Engine
+  - Applies the policies (rules) based on the input data and policies defined.
+  
 
     
