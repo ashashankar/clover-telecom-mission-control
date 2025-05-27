@@ -28,12 +28,22 @@ analytics and real time dashboards are supported.
   - Registers and manages enterprise devices. CRUD for Devices. (ex: when a new devices connect to a tower it registers its metadata.)
 - Tower Service
   - Stores tower - carrierOS mapping (ex: which towers can At&t users connect to)
+  - Tower will publish events to KafkaQ regarding the app usage.
 - User Service
   - manages User identify and Enterprise role / subscription 
 - Policy Service
   - Manages polices given by enterprises 
 - Policy Engine
   - Applies the policies (rules) based on the input data and policies defined.
-  
+  - publishes the decision event to Kafka Q for monitoring service to consume.
+- Edge Application Service (A service that will allow , deny or remediate)
+  - sends / denies to tower
+  - raises auto-remediation tasks/ alerts
+- Monitoring & Analytics Service
+  - will consume events from Tower and Policy engine
+  - aggregate and analyze events
+  - raise alerts if needed.
+  - updates elastic search
+
 
     

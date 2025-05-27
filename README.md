@@ -22,7 +22,7 @@ docs/
 ## Technologies
 **Backend Framework**: Java, Spring boot
 **Messaging** : Kafka
-**Database**: SQL
+**Database**: SQL, Elastic Search
 
 ## following a microservice architecture 
 
