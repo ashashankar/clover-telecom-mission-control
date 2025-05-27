@@ -1,4 +1,4 @@
-# API documentation 
+# API documentation V1.0
 
 **Register devices**
 - POST /devices
