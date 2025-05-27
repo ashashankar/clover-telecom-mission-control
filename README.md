@@ -33,5 +33,5 @@ docs/
 - [Entities](docs/entities.md)
 - [API spec](docs/APIs.md)
 - [Assumptions](docs/assumptions.md)
-- [System Design Diagram](diagrams/telecommissoncontrol.drawio.png)
+- [System Design Diagram](diagrams/telegrammissioncontroldesign.drawio.png)
 
