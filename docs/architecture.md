@@ -43,7 +43,7 @@ analytics and real time dashboards are supported.
   - will consume events from Tower and Policy engine
   - aggregate and analyze events
   - raise alerts if needed.
-  - updates elastic search
+ 
 
 
     
