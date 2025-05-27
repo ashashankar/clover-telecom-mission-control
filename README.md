@@ -29,8 +29,8 @@ docs/
 ## Designed by Asha 
 
 - [Architecture](docs/architecture.md)
-- [ER diagram](docs/architecture.md)
-- [System Design](docs/architecture.md)
-- [API spec]()
+- [Data flow](docs/dataflow.md)
+- [Entities](docs/entities.md)
+- [API spec](docs/APIs.md)
 - [Assumptions](docs/assumptions.md)
 
